@@ -1,0 +1,14 @@
+body
+{
+    background-color: #272B30;
+}
+
+.background
+{
+    background-image: url(../images/wraper.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+}
+
