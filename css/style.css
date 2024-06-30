@@ -1,6 +1,7 @@
 body
 {
     background-color: #272B30;
+    font-family: "Comfortaa", cursive;
 }
 
 .background
@@ -12,3 +13,46 @@ body
     height: 250px;
 }
 
+.navbar
+{
+    background-color: #3A497B;
+    position: sticky !important;
+    width: 75%;
+    margin: auto;
+    border-radius: 20px;
+    transform: translate(0, -25px);
+    padding-block: 12px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5) ;
+    
+}
+.navbar a
+{
+    font-size: 13px;
+    color: white;
+}
+.navbar .active
+{
+  
+    color: #0099CC !important;
+}
+
+.navbar a:hover
+{
+    color: #0099CC !important;
+}
+
+.navbar .image
+{
+    width: 14%;
+    
+}
+.navbar .image img
+{
+    width: 100%;
+}
+.navbar .title
+{
+    position: relative;
+    left: -65px;
+    font-size: 20px;
+}
