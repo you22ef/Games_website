@@ -23,6 +23,7 @@ body
     transform: translate(0, -25px);
     padding-block: 12px;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5) ;
+    margin-bottom: 30px;
     
 }
 .navbar a
@@ -55,4 +56,48 @@ body
     position: relative;
     left: -65px;
     font-size: 20px;
+}
+
+
+
+.card-footer small
+{
+    font-weight: bold;
+    color: white;
+    background-color: #32383E;
+    border-radius: 5px;
+    padding: 5px;
+    padding-block: 2px;
+    font-size: 10px;
+}
+
+.card-text
+{
+    
+    color: #939598;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.kind .free
+{
+    padding: 6px;
+    font-size: 14px;
+    background-color: #0D6EFD;
+    border-radius: 5px;
+}
+
+.card
+{
+    filter: grayscale(75%);
+    transition: all 0.7s ease;
+    cursor: pointer;
+    
+}
+
+.card:hover
+{
+    transform: scale(1.07);
+    filter: grayscale(0%);
+    
 }
