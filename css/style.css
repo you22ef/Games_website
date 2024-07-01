@@ -58,6 +58,15 @@ body
     font-size: 20px;
 }
 
+.card-footer
+{
+    
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    
+}
 
 
 .card-footer small
@@ -94,6 +103,8 @@ body
     cursor: pointer;
     
 }
+
+
 
 .card:hover
 {
