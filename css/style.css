@@ -208,6 +208,10 @@ body
     {
         right: 40px;
     }
+    .navbar
+    {
+        width: 90%;
+    }
     
 }
 @media all and (min-width: 576px) and (max-width: 768px  )

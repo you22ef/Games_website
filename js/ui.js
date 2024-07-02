@@ -24,7 +24,6 @@ class Data
         try {
             const response = await fetch(url, options);
             this.data = await response.json();
-            console.log(this.data);
         } catch (error) {
             console.error(error);
         }
@@ -35,11 +34,8 @@ class Data
 
         await this.getData(value);
         let row = this.row;
-        console.log(row);
         const data = this.data;
-        console.log(this.data);
         const len = data.length;
-        console.log(len);
         let cartoona = '';
         for (let i = 0; i < len; i++) 
         {
@@ -65,7 +61,6 @@ class Data
             </div>
           </div>`;
         }
-        console.log(row);
         row.innerHTML = cartoona;
         this.spinner.classList.add('d-none');
         this.cardClick();
@@ -73,10 +68,8 @@ class Data
 
     cardClick() {
 
-        console.log('card');
         let card = document.querySelectorAll('.card');
         let len = card.length;
-        console.log(card);
         for (let i = 0; i < len; i++) 
         {
             card[i].addEventListener('click', (e) => {

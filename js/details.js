@@ -65,7 +65,6 @@ class Details
     closeButton()
     {
         let close = this.close;
-        console.log(this.parent);
         close.addEventListener('click', async () => {
             this.spinner.classList.remove('d-none');
             let p = this.parent;

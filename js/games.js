@@ -34,10 +34,8 @@ class Nav
                 let active = document.querySelector('.active');
                 active.classList.remove('active');
                 links[i].classList.add('active');
-                console.log(links[i]);
                 let value = links[i].innerText;
                 this.value = value;
-                console.log(value);
                 data.displayData(value.toLowerCase());
             });
         }
