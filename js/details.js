@@ -52,7 +52,7 @@ class Details
           <p>Status: <span>${data.status}</span></p>
           <p class="fs-p">${data.description}</p>
         </div>
-        <a class="btn btn-outline-warning text-white" target="_blank" href="${data.game_url}">Show Game</a>
+        <a class="btn btn-outline-warning text-white mb-4" target="_blank" href="${data.game_url}">Show Game</a>
       </div>`;
         
         display.innerHTML = cartoona;
