@@ -11,6 +11,7 @@ class Details
         this.parent = document.querySelector('.display');
         this.close = document.querySelector('.display .btn-close');
         this.container = document.querySelector('.dataCon');
+        this.spinner = document.querySelector('.spinner');
     }
     async getData(id)
     {
@@ -56,6 +57,7 @@ class Details
       </div>`;
         
         display.innerHTML = cartoona;
+        this.spinner.classList.add('d-none');
 
     }
 
@@ -65,6 +67,7 @@ class Details
         let close = this.close;
         console.log(this.parent);
         close.addEventListener('click', async () => {
+            this.spinner.classList.remove('d-none');
             let p = this.parent;
             p.classList.add("d-none");
             let display = this.display;
@@ -72,7 +75,15 @@ class Details
             let container = this.container;
             container.classList.remove("d-none");
             nav.displayNav();
-            await data.displayData();
+            if(nav.value == undefined)
+            {
+                await data.displayData("mmorpg");
+            }
+            else
+            {
+                await data.displayData(nav.value);
+            }
+            
         });
 
     }

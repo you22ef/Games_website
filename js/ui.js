@@ -8,10 +8,11 @@ class Data
         this.data =[];
         this.row = document.querySelector('.rd');
         this.container = document.querySelector('.dataCon');
+        this.spinner = document.querySelector('.spinner');
     }
-    async getData()
+    async getData(value)
     {
-        const url = 'https://free-to-play-games-database.p.rapidapi.com/api/games?category=mmorpg';
+        const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${value}`;
         const options = {
             method: 'GET',
             headers: {
@@ -29,11 +30,10 @@ class Data
         }
     }
 
-    async displayData() 
+    async displayData(value) 
     {
-        console.log('A7a');
 
-        await this.getData();
+        await this.getData(value);
         let row = this.row;
         console.log(row);
         const data = this.data;
@@ -67,6 +67,7 @@ class Data
         }
         console.log(row);
         row.innerHTML = cartoona;
+        this.spinner.classList.add('d-none');
         this.cardClick();
     }
 
@@ -79,6 +80,7 @@ class Data
         for (let i = 0; i < len; i++) 
         {
             card[i].addEventListener('click', (e) => {
+                this.spinner.classList.remove('d-none');
                 let container = this.container;
                 let data = this.data;
                 container.classList.add('d-none');
@@ -95,5 +97,5 @@ class Data
 
 export let data = new Data();
 
-await data.displayData();
+await data.displayData("mmorpg");
 data.cardClick();
