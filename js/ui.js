@@ -1,10 +1,13 @@
+import { nav } from './games.js';
+import {details} from './details.js';
 class Data
 {
 
     constructor()
     {
         this.data =[];
-        this.row = document.querySelector('.row');
+        this.row = document.querySelector('.rd');
+        this.container = document.querySelector('.dataCon');
     }
     async getData()
     {
@@ -28,12 +31,15 @@ class Data
 
     async displayData() 
     {
+        console.log('A7a');
 
         await this.getData();
         let row = this.row;
+        console.log(row);
         const data = this.data;
         console.log(this.data);
         const len = data.length;
+        console.log(len);
         let cartoona = '';
         for (let i = 0; i < len; i++) 
         {
@@ -61,13 +67,33 @@ class Data
         }
         console.log(row);
         row.innerHTML = cartoona;
+        this.cardClick();
+    }
 
+    cardClick() {
+
+        console.log('card');
+        let card = document.querySelectorAll('.card');
+        let len = card.length;
+        console.log(card);
+        for (let i = 0; i < len; i++) 
+        {
+            card[i].addEventListener('click', (e) => {
+                let container = this.container;
+                let data = this.data;
+                container.classList.add('d-none');
+                nav.removeNav();
+                details.displayData(data[i].id);
+            });
+        }
+        
     }
     
 }
 
 
 
-let a = new Data();
+export let data = new Data();
 
-a.displayData();
+await data.displayData();
+data.cardClick();
